@@ -16,7 +16,7 @@ architecture test of ha_tb is
 
 	signal a, b, o, c : std_ulogic;
 begin
-	half_adder: ha port map(a => b, b => b, o => o, c => c);
+	half_adder: ha port map(a => a, b => b, o => o, c => c);
 
 	process begin
 		 a <= 'X';
@@ -35,8 +35,8 @@ begin
 		 b <= '1';
 		 wait for 1 ns;
 
-		 a <= '1';
-		 b <= '1';
+		 a <= '0';
+		 b <= '0';
 		 wait for 1 ns;
 
 		 assert false report "Reached end of test";
