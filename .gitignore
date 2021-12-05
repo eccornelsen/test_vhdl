@@ -1,0 +1,9 @@
+*~*
+*.swp*
+*.cf
+*.vcd
+*.vhd~
+*.ghw
+*.swo
+/compile*
+vunit_out
